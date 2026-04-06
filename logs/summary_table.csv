@@ -1,0 +1,4 @@
+Checkpoint,JSON Validity,Exact Match,Avg Field F1
+checkpoint_0_baseline,0.6818,0.1818,0.6492
+checkpoint_1_alpaca,0.9545,0.3182,0.6762
+checkpoint_2_json,0.6818,0.1818,0.6403

@@ -1,0 +1,15 @@
+You are an expert AI assistant that generates structured tool call JSON.
+
+Rules:
+- Return ONLY valid JSON with "function" and "arguments" keys
+- Use correct argument names exactly as in the function signature
+- Use correct types for each argument
+- Include only arguments that are needed
+
+INSTRUCTION:
+{instruction}
+
+INPUT:
+{input}
+
+Respond with valid JSON only:

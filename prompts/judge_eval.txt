@@ -1,0 +1,33 @@
+You are an expert LLM evaluator. Compare two model responses and score them.
+
+Evaluate BOTH responses on these six dimensions (score 1-5):
+1. instruction_following
+2. correctness
+3. clarity
+4. completeness
+5. structured_output_validity
+6. hallucination_risk
+
+INSTRUCTION:
+{instruction}
+
+INPUT:
+{input}
+
+RESPONSE A (from {checkpoint_a}):
+{response_a}
+
+RESPONSE B (from {checkpoint_b}):
+{response_b}
+
+Return ONLY valid JSON:
+
+{
+  "prompt_id": "{prompt_id}",
+  "checkpoint_a": "{checkpoint_a}",
+  "checkpoint_b": "{checkpoint_b}",
+  "response_a_scores": {"instruction_following": 0, "correctness": 0, "clarity": 0, "completeness": 0, "structured_output_validity": 0, "hallucination_risk": 0},
+  "response_b_scores": {"instruction_following": 0, "correctness": 0, "clarity": 0, "completeness": 0, "structured_output_validity": 0, "hallucination_risk": 0},
+  "winner": "<A|B|Tie>",
+  "justification": "<one paragraph>"
+}

@@ -1,0 +1,44 @@
+/usr/bin/id: cannot find name for group ID 74200513
+/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/work/vsv632/assign3/train/stage2_train.py", line 176, in <module>
+    train()
+  File "/work/vsv632/assign3/train/stage2_train.py", line 133, in train
+    dataset = load_data()
+  File "/work/vsv632/assign3/train/stage2_train.py", line 69, in load_data
+    data = json.loads(Path(train_path).read_text(encoding="utf-8"))
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/work/vsv632/assign3/data/json_instruct_train.json'
+/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+A new version of the following files was downloaded from https://huggingface.co/microsoft/Phi-3.5-mini-instruct:
+- configuration_phi3.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/microsoft/Phi-3.5-mini-instruct:
+- modeling_phi3.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:32<00:32, 32.52s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:54<00:00, 26.24s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:54<00:00, 27.18s/it]
+Traceback (most recent call last):
+  File "/work/vsv632/assign3/inference/generate_outputs.py", line 196, in <module>
+    main()
+  File "/work/vsv632/assign3/inference/generate_outputs.py", line 187, in main
+    model, tokenizer = load_model(ckpt_id)
+  File "/work/vsv632/assign3/inference/generate_outputs.py", line 92, in load_model
+    tokenizer = AutoTokenizer.from_pretrained(STAGE2_OUTPUT_DIR, trust_remote_code=True)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 854, in from_pretrained
+    config = AutoConfig.from_pretrained(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 976, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/configuration_utils.py", line 632, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/configuration_utils.py", line 689, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/utils/hub.py", line 373, in cached_file
+    raise EnvironmentError(
+OSError: /work/vsv632/assign3/checkpoints/stage2_json does not appear to have a file named config.json. Checkout 'https://huggingface.co//work/vsv632/assign3/checkpoints/stage2_json/tree/None' for available files.

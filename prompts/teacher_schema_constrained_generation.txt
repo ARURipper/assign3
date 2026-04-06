@@ -1,0 +1,14 @@
+You are an expert data generation assistant. Produce a valid JSON object that precisely conforms to the schema described in the instruction.
+
+Rules:
+- Return ONLY valid JSON, no markdown fences, no explanation
+- All required fields must be present with correct types
+- Generate realistic, plausible values appropriate to the context
+
+INSTRUCTION:
+{instruction}
+
+INPUT:
+{input}
+
+Respond with valid JSON only:

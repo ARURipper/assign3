@@ -1,0 +1,51 @@
+Job started: Sun Apr  5 09:08:57 CDT 2026
+Node: gpu011
+Sun Apr  5 09:08:57 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100S-PCIE-32GB          On  | 00000000:3B:00.0 Off |                  Off |
+| N/A   27C    P0              23W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+=== Starting Stage 2: JSON Fine-Tuning ===
+=== Stage 2: JSON Instruct Fine-Tuning ===
+Starting from Stage 1 checkpoint: /work/vsv632/assign3/checkpoints/stage1_alpaca
+Output dir: /work/vsv632/assign3/checkpoints/stage2_json
+=== Generating Checkpoint 2 outputs ===
+Loading checkpoint 2: checkpoint_2_json
+=== Running JSON evaluation (all checkpoints) ===
+Evaluating: checkpoint_0_baseline
+No JSON outputs found for checkpoint_0_baseline
+Evaluating: checkpoint_1_alpaca
+No JSON outputs found for checkpoint_1_alpaca
+Evaluating: checkpoint_2_json
+No JSON outputs found for checkpoint_2_json
+
+Saved JSON eval results to /work/vsv632/assign3/logs/json_eval_results.json
+=== Generating figures ===
+Saved: /work/vsv632/assign3/logs/figures/json_validity.png
+Saved: /work/vsv632/assign3/logs/figures/json_exact_match.png
+Saved: /work/vsv632/assign3/logs/figures/task_breakdown_heatmap.png
+Saved: /work/vsv632/assign3/logs/summary_table.csv
+           Checkpoint JSON Validity Exact Match Avg Field F1
+checkpoint_0_baseline             -           -            -
+  checkpoint_1_alpaca             -           -            -
+    checkpoint_2_json             -           -            -
+No judge results found. Run eval/judge_eval.py first.
+
+All figures saved to: /work/vsv632/assign3/logs/figures
+=== Stage 2 complete ===
+Job ended: Sun Apr  5 09:12:02 CDT 2026

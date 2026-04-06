@@ -1,0 +1,70 @@
+Job started: Sun Apr  5 09:59:13 CDT 2026
+Node: gpu002
+Sun Apr  5 09:59:13 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100S-PCIE-32GB          On  | 00000000:3B:00.0 Off |                  Off |
+| N/A   28C    P0              23W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+=== Starting Stage 2: JSON Fine-Tuning ===
+=== Stage 2: JSON Instruct Fine-Tuning ===
+Starting from Stage 1 checkpoint: /work/vsv632/assign3/checkpoints/stage1_alpaca
+Output dir: /work/vsv632/assign3/checkpoints/stage2_json
+Training examples: 216
+Loading Stage 1 adapter from: /work/vsv632/assign3/checkpoints/stage1_alpaca
+Merging Stage 1 adapter...
+trainable params: 8,912,896 || all params: 3,829,992,448 || trainable%: 0.2327
+Starting Stage 2 training...
+{'loss': 1.7914, 'grad_norm': 1.0511552095413208, 'learning_rate': 7.937323358440935e-07, 'epoch': 1.48}
+{'train_runtime': 43.0981, 'train_samples_per_second': 10.024, 'train_steps_per_second': 0.278, 'train_loss': 1.7812096079190571, 'epoch': 1.78}
+Stage 2 complete. Adapter saved to: /work/vsv632/assign3/checkpoints/stage2_json
+=== Generating Checkpoint 2 outputs ===
+Loading checkpoint 2: checkpoint_2_json
+Alpaca outputs saved to /work/vsv632/assign3/results/checkpoint_2_json/alpaca_outputs.json
+JSON outputs saved to /work/vsv632/assign3/results/checkpoint_2_json/json_outputs.json
+Checkpoint 2 done.
+
+=== Running JSON evaluation (all checkpoints) ===
+Evaluating: checkpoint_0_baseline
+No JSON outputs found for checkpoint_0_baseline
+Evaluating: checkpoint_1_alpaca
+No JSON outputs found for checkpoint_1_alpaca
+Evaluating: checkpoint_2_json
+  JSON Validity:  70.5%
+  Exact Match:    18.2%
+  Avg Field F1:   0.6282
+    schema_constrained_generation: validity=41.7%, exact=0.0%
+    json_repair: validity=100.0%, exact=44.4%
+    exact_label_classification: validity=75.0%, exact=0.0%
+    json_extraction: validity=66.7%, exact=44.4%
+    tool_call_generation: validity=80.0%, exact=0.0%
+
+Saved JSON eval results to /work/vsv632/assign3/logs/json_eval_results.json
+=== Generating figures ===
+Saved: /work/vsv632/assign3/logs/figures/json_validity.png
+Saved: /work/vsv632/assign3/logs/figures/json_exact_match.png
+Saved: /work/vsv632/assign3/logs/figures/task_breakdown_heatmap.png
+Saved: /work/vsv632/assign3/logs/summary_table.csv
+           Checkpoint JSON Validity Exact Match Avg Field F1
+checkpoint_0_baseline             -           -            -
+  checkpoint_1_alpaca             -           -            -
+    checkpoint_2_json        0.7045      0.1818       0.6282
+No judge results found. Run eval/judge_eval.py first.
+
+All figures saved to: /work/vsv632/assign3/logs/figures
+=== Stage 2 complete ===
+Job ended: Sun Apr  5 10:48:50 CDT 2026

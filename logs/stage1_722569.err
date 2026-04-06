@@ -1,0 +1,87 @@
+/usr/bin/id: cannot find name for group ID 74200513
+There was a problem when trying to write in your cache folder (/work/scratch/vsv632/.huggingface_cach/hub). You should set the environment variable TRANSFORMERS_CACHE to a writable directory.
+Traceback (most recent call last):
+  File "/work/vsv632/assign3/train/stage1_train.py", line 164, in <module>
+    train()
+  File "/work/vsv632/assign3/train/stage1_train.py", line 124, in train
+    model, tokenizer = load_model_and_tokenizer()
+  File "/work/vsv632/assign3/train/stage1_train.py", line 86, in load_model_and_tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(STUDENT_MODEL, trust_remote_code=True)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 834, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 666, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/utils/hub.py", line 402, in cached_file
+    resolved_file = hf_hub_download(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1131, in _hf_hub_download_to_cache_dir
+    os.makedirs(os.path.dirname(blob_path), exist_ok=True)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 2 more times]
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/work/scratch'
+There was a problem when trying to write in your cache folder (/work/scratch/vsv632/.huggingface_cach/hub). You should set the environment variable TRANSFORMERS_CACHE to a writable directory.
+Traceback (most recent call last):
+  File "/work/vsv632/assign3/inference/generate_outputs.py", line 196, in <module>
+    main()
+  File "/work/vsv632/assign3/inference/generate_outputs.py", line 187, in main
+    model, tokenizer = load_model(ckpt_id)
+  File "/work/vsv632/assign3/inference/generate_outputs.py", line 77, in load_model
+    base = AutoModelForCausalLM.from_pretrained(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 485, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/utils/hub.py", line 402, in cached_file
+    resolved_file = hf_hub_download(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1131, in _hf_hub_download_to_cache_dir
+    os.makedirs(os.path.dirname(blob_path), exist_ok=True)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 2 more times]
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/work/scratch'
+There was a problem when trying to write in your cache folder (/work/scratch/vsv632/.huggingface_cach/hub). You should set the environment variable TRANSFORMERS_CACHE to a writable directory.
+Traceback (most recent call last):
+  File "/work/vsv632/assign3/inference/generate_outputs.py", line 196, in <module>
+    main()
+  File "/work/vsv632/assign3/inference/generate_outputs.py", line 187, in main
+    model, tokenizer = load_model(ckpt_id)
+  File "/work/vsv632/assign3/inference/generate_outputs.py", line 77, in load_model
+    base = AutoModelForCausalLM.from_pretrained(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 485, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/transformers/utils/hub.py", line 402, in cached_file
+    resolved_file = hf_hub_download(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1131, in _hf_hub_download_to_cache_dir
+    os.makedirs(os.path.dirname(blob_path), exist_ok=True)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 2 more times]
+  File "/work/vsv632/.conda_envs/llm_assign3/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/work/scratch'

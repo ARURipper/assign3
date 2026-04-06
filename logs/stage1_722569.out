@@ -1,0 +1,49 @@
+Job started: Sat Apr  4 23:35:27 CDT 2026
+Running on node: gpu002
+GPU info:
+Sat Apr  4 23:35:27 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100S-PCIE-32GB          On  | 00000000:3B:00.0 Off |                  Off |
+| N/A   28C    P0              23W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+=== Preparing Alpaca data ===
+Raw Alpaca data already exists at /work/vsv632/assign3/data/alpaca_raw.json, skipping download.
+After cleaning: 51323 examples (from 51760)
+Train: 10000 examples → /work/vsv632/assign3/data/alpaca_train.json
+Eval:  200 examples → /work/vsv632/assign3/data/alpaca_eval.json
+Done.
+=== Starting Stage 1: Alpaca Fine-Tuning ===
+=== Stage 1: Alpaca Fine-Tuning ===
+Student model: microsoft/Phi-3.5-mini-instruct
+Output dir:    /work/vsv632/assign3/checkpoints/stage1_alpaca
+Training examples: 10000
+=== Generating Checkpoint 0 (baseline) outputs ===
+Loading checkpoint 0: checkpoint_0_baseline
+=== Generating Checkpoint 1 (Alpaca-tuned) outputs ===
+Loading checkpoint 1: checkpoint_1_alpaca
+=== Running JSON evaluation ===
+Evaluating: checkpoint_0_baseline
+No JSON outputs found for checkpoint_0_baseline
+Evaluating: checkpoint_1_alpaca
+No JSON outputs found for checkpoint_1_alpaca
+Evaluating: checkpoint_2_json
+No JSON outputs found for checkpoint_2_json
+
+Saved JSON eval results to /work/vsv632/assign3/logs/json_eval_results.json
+=== Stage 1 pipeline complete ===
+Job ended: Sat Apr  4 23:35:48 CDT 2026

@@ -1,0 +1,14 @@
+You are an expert text classification assistant.
+
+Rules:
+- Return ONLY valid JSON, no markdown fences, no explanation
+- Use ONLY the label values specified in the instruction
+- Include a confidence score between 0.0 and 1.0
+
+INSTRUCTION:
+{instruction}
+
+INPUT:
+{input}
+
+Respond with valid JSON only:

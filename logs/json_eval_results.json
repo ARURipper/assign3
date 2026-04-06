@@ -1,0 +1,104 @@
+{
+  "checkpoint_0_baseline": {
+    "checkpoint": "checkpoint_0_baseline",
+    "n_samples": 44,
+    "json_validity_rate": 0.6818,
+    "exact_match_rate": 0.1818,
+    "avg_field_f1": 0.6492,
+    "by_task": {
+      "schema_constrained_generation": {
+        "total": 12,
+        "validity_rate": 0.3333,
+        "exact_rate": 0.0
+      },
+      "json_repair": {
+        "total": 9,
+        "validity_rate": 1.0,
+        "exact_rate": 0.4444
+      },
+      "exact_label_classification": {
+        "total": 4,
+        "validity_rate": 0.75,
+        "exact_rate": 0.0
+      },
+      "json_extraction": {
+        "total": 9,
+        "validity_rate": 0.6667,
+        "exact_rate": 0.4444
+      },
+      "tool_call_generation": {
+        "total": 10,
+        "validity_rate": 0.8,
+        "exact_rate": 0.0
+      }
+    }
+  },
+  "checkpoint_1_alpaca": {
+    "checkpoint": "checkpoint_1_alpaca",
+    "n_samples": 44,
+    "json_validity_rate": 0.9545,
+    "exact_match_rate": 0.3182,
+    "avg_field_f1": 0.6762,
+    "by_task": {
+      "schema_constrained_generation": {
+        "total": 12,
+        "validity_rate": 0.9167,
+        "exact_rate": 0.0
+      },
+      "json_repair": {
+        "total": 9,
+        "validity_rate": 1.0,
+        "exact_rate": 0.4444
+      },
+      "exact_label_classification": {
+        "total": 4,
+        "validity_rate": 0.75,
+        "exact_rate": 0.25
+      },
+      "json_extraction": {
+        "total": 9,
+        "validity_rate": 1.0,
+        "exact_rate": 0.7778
+      },
+      "tool_call_generation": {
+        "total": 10,
+        "validity_rate": 1.0,
+        "exact_rate": 0.2
+      }
+    }
+  },
+  "checkpoint_2_json": {
+    "checkpoint": "checkpoint_2_json",
+    "n_samples": 44,
+    "json_validity_rate": 0.6818,
+    "exact_match_rate": 0.1818,
+    "avg_field_f1": 0.6403,
+    "by_task": {
+      "schema_constrained_generation": {
+        "total": 12,
+        "validity_rate": 0.3333,
+        "exact_rate": 0.0
+      },
+      "json_repair": {
+        "total": 9,
+        "validity_rate": 1.0,
+        "exact_rate": 0.4444
+      },
+      "exact_label_classification": {
+        "total": 4,
+        "validity_rate": 0.75,
+        "exact_rate": 0.0
+      },
+      "json_extraction": {
+        "total": 9,
+        "validity_rate": 0.6667,
+        "exact_rate": 0.4444
+      },
+      "tool_call_generation": {
+        "total": 10,
+        "validity_rate": 0.8,
+        "exact_rate": 0.0
+      }
+    }
+  }
+}
