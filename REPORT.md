@@ -13,7 +13,6 @@ Key Results:
 
 Conclusion: Stage 1 Alpaca training unexpectedly produced the best structured output performance. Stage 2 JSON training with a small dataset (396 examples) caused catastrophic forgetting, reverting all JSON gains. The complete pipeline is reproducible on UTSA HPC Arc with all code provided in the repository.
 
----
 
 ## 1. Methodology
 
@@ -118,7 +117,6 @@ conda activate llm_assign3
 export HF_HOME=/work/vsv632/.huggingface_cache
 ```
 
----
 
 ## 2. Experiments and Results
 
@@ -219,7 +217,6 @@ Finding: Increasing from 216 to 396 examples did not meaningfully reduce forgett
 
 **Recommendation:** For balanced performance (general + JSON), a dataset of at least 2,000 high-quality teacher-generated examples is likely needed, along with a lower learning rate (5e-6 or below) to slow gradient updates.
 
----
 
 ## 3. Analysis and Discussion
 
@@ -303,7 +300,6 @@ All checkpoints generated structurally valid JSON with function and arguments ke
 - Lower Stage 2 learning rate (5e-6): Expected to reduce forgetting with minimal JSON impact
 - Multi-task training: Train on a combined Alpaca + JSON dataset simultaneously
 
----
 
 ## 4. Prompt Engineering
 
@@ -338,7 +334,6 @@ For Stage 2 training examples, system context included "Respond ONLY with valid 
 
 **Lower learning rate in Stage 2:** 1e-5 versus 2e-5 was intended to slow forgetting. Despite this, severe forgetting still occurred, suggesting dataset size was the more important factor.
 
----
 
 ## 5. Conclusion
 
@@ -363,7 +358,6 @@ This assignment successfully implemented a two-stage sequential instruction-tuni
 
 **Final Statement:** Sequential fine-tuning requires careful balance between specialization and retention. The most important lever is Stage 2 dataset size — more data reduces forgetting. This pipeline provides a reproducible framework for studying post-training alignment in small LLMs on UTSA HPC Arc.
 
----
 
 ## References
 
@@ -383,7 +377,6 @@ Rafailov, R., et al. (2024). From Human Preferences to Post-Training Alignment P
 
 McCloskey, M., and Cohen, N. J. (1989). Catastrophic Interference in Connectionist Networks. Psychology of Learning and Motivation, 24, 109-165.
 
----
 
 ## Appendix: Full Prompt Templates
 
